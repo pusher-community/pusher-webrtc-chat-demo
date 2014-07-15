@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pusher WebRTC DataChannel Demo</title>
+
+  <!-- Bootstrap for general layout and styling -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Our WebRTC application styling -->
+  <link rel="stylesheet" type="text/css" href="style/datachannel-demo.css">
+</head>
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="container">
+      <a class="brand" href="http://pusher.com">
+        <img src="http://pusher.com/prom/images/new_landing_page/pusher-logo.png" alt="Pusher" width="111" height="37">
+      </a>
+
+      <span>| Realtime API</span>
+
+      <a href="http://pusher.com/pricing"><button class="btn signup-button">Create a Free Account</button></a>
+    </div>
+  </nav>
+    
+  <div class="container">
+    <div class="row">
+      <header class="col-md-12">
+        <h1>WebRTC DataChannel Chat</h1>
+      </header>
+    </div>
+
+    <div class="row">
+      <section class="col-md-12">
+        <p>This chat application uses WebRTC to create a peer-to-peer, server-less connection between you and the recipient of your chat messages, a bit like Skype!</p>
+
+        <hr>
+
+        <div class="buttons">
+          <a href="" class="btn btn-success">Download the code</a>
+          <a href="" class="btn btn-warning">Read the tutorial</a>
+        </div>
+
+        <hr>
+
+        <h2>Getting started</h2>
+
+        <ol>
+          <li>Type a channel name and click create</li>
+          <li>Open the chat in another tab</li>
+          <li>Type the same channel name and click join</li>
+          <li>Wait a moment and start chatting!</li>
+        </ol>
+
+        <!-- WebRTC demo -->
+        <div class="demo">
+          <div class="demo-connect">
+            <input type="text" class="demo-chat-channel-input form-control" placeholder="Channel name"></input>
+            <button class="demo-chat-create btn btn-primary">Create</button>
+            <button class="demo-chat-join btn btn-warning">Join</button>
+          </div>
+          <div class="demo-chat inactive">
+            <div class="demo-chat-input">
+              <input name="message" class="demo-chat-message-input form-control" placeholder="Message"></input>
+              <button class="demo-chat-send btn btn-primary">Send</button>
+            </div>
+            <ul class="demo-chat-messages list-group">
+              <li class="list-group-item" data-remove="true">No chat messages available</li>
+            </ul>
+          </div>
+          <footer>
+            <a href="http://pusher.com">Pusher</a> powered peer-to-peer chat
+          </footer>
+        </div>
+        <!-- /End WebRTC demo -->
+      </section>
+    </div>
+  </div>
+  
+  <!-- Zepto for AJAX -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
+
+  <!-- Pusher for WebRTC signalling -->
+  <script src="//js.pusher.com/2.2/pusher.js"></script>
+  
+  <!-- DataChannel.js for WebRTC functionality -->
+  <script src="//webrtc-experiment.com/DataChannel.js"></script>
+
+  <!-- Our WebRTC application -->
+  <script src="js/datachannel-demo.js"></script>
+</body>
+</html>

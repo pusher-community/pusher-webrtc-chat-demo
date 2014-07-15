@@ -1,0 +1,5 @@
+*.DS_Store
+config.js
+config.php
+config.rb
+node_modules

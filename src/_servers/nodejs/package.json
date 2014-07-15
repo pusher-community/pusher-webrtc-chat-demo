@@ -1,0 +1,17 @@
+{
+  "name": "pusher-webrtc-datachannel-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Hawkes <robin@pusher.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.4.5",
+    "body-parser": "~1.4.3",
+    "errorhandler": "~1.1.1",
+    "pusher": "~0.1.3"
+  }
+}
