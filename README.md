@@ -32,7 +32,7 @@ You'll also need to change the config values in `src/_servers/php/config.example
 
 Navigate to http://yourdomain.dev/index.html to see the side-by-side example or http://yourdomain.dev/chat.html to see the standalone example. Obviously you'll need to change the domain to wherever you're hosting the PHP files.
 
-### /src/_servers/node-sinatra
+### /src/_servers/ruby-sinatra
 
 The server code required to run the demo using [Ruby Sinatra](http://www.sinatrarb.com/).
 
