@@ -1,5 +1,7 @@
 # Pusher WebRTC Chat Demo
 
+This is a demo WebRTC application for peer-to-peer chat, meaning you don't necessarily need an Internet connection to send messages. It uses the Pusher realtime API for signalling, allowing devices to discover each other and make a connection using WebRTC.
+
 ## Servers
 
 You can use any server to pass-through the Pusher messages. This demo provides a few of the most common platforms.
