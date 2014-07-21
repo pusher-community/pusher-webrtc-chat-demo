@@ -1,5 +1,5 @@
 {
-  "name": "pusher-webrtc-datachannel-demo",
+  "name": "pusher-webrtc-datachannel-demo-dokku",
   "version": "0.0.0",
   "description": "",
   "main": "src/_servers/nodejs/app.js",
