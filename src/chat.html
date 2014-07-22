@@ -55,7 +55,7 @@
         <!-- WebRTC demo -->
         <div class="demo">
           <div class="demo-connect">
-            <input type="text" class="demo-chat-channel-input form-control" placeholder="Channel name" value="my-chat-room"></input>
+            <input type="text" class="demo-chat-channel-input form-control" placeholder="Channel name"></input>
             <button class="demo-chat-create btn btn-primary">Create</button>
             <button class="demo-chat-join btn btn-warning">Join</button>
           </div>
@@ -88,5 +88,21 @@
 
   <!-- Our WebRTC application -->
   <script src="js/datachannel-demo.js"></script>
+
+  <!-- Fill channel name -->
+  <script>
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    var channel = getParameterByName("channel");
+
+    if (channel) {
+      document.querySelector(".demo-chat-channel-input").value = channel;
+    }
+  </script>
 </body>
 </html>
