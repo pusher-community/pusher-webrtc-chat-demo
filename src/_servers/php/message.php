@@ -10,7 +10,7 @@ class MyLogger {
 
 // TODO: Check for valid POST data
 
-$pusher = new Pusher(APP_KEY, APP_SECRET, APP_ID, array('cluster' => CLUSTER));
+$pusher = new Pusher(APP_KEY, APP_SECRET, APP_ID, array('cluster' => APP_CLUSTER));
 
 // uncomment to enable pusher logging!
 //$pusher->set_logger( new MyLogger() );
