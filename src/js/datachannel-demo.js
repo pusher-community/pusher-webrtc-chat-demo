@@ -6,7 +6,7 @@ var datachannel = new DataChannel();
 datachannel.userid = window.userid;
 
 // Open a connection to Pusher
-var pusher = new Pusher("PUSHER_APP_KEY");
+var pusher = new Pusher("PUSHER_APP_KEY", { cluster: "PUSHER_APP_CLUSTER" });
 
 // Storage of Pusher connection socket ID
 var socketId;
@@ -35,7 +35,7 @@ pusher.connection.bind("state_change", function(states) {
 datachannel.openSignalingChannel = function(config) {
   var channel = config.channel || this.channel || "default-channel";
   var xhrErrorCount = 0;
-  
+
   var socket = {
     send: function(message) {
       $.ajax({
@@ -124,7 +124,7 @@ var onSendMessage = function() {
   datachannel.send(message);
   addMessage(message, window.userid, true);
 
-  messageInput.value = "";  
+  messageInput.value = "";
 };
 
 var onMessageKeyDown = function(event) {
@@ -140,7 +140,7 @@ var addMessage = function(message, userId, self) {
   var messageCount = messages.length;
   for (var i = 0; i < messageCount; i++) {
     var msg = messages[i];
-    
+
     if (msg.dataset.remove === "true") {
       messageList.removeChild(msg);
     }

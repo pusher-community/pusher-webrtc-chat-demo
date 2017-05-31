@@ -6,7 +6,8 @@ try {
   config = {
     app_id: process.env.PUSHER_APP_ID,
     key: process.env.PUSHER_APP_KEY,
-    secret: process.env.PUSHER_APP_SECRET
+    secret: process.env.PUSHER_APP_SECRET,
+    cluster: process.env.PUSHER_APP_CLUSTER,
   }
 }
 
@@ -24,7 +25,8 @@ var Pusher = require("pusher");
 var pusher = new Pusher({
   appId: config.app_id,
   key: config.key,
-  secret: config.secret
+  secret: config.secret,
+  cluster: config.cluster
 });
 
 // --------------------------------------------------------------------
@@ -61,7 +63,7 @@ app.get("/_servers", function(req, res) {
 // Message proxy
 app.post("/message", function(req, res) {
   // TODO: Check for valid POST data
-  
+
   var socketId = req.body.socketId;
   var channel = req.body.channel;
   var message = req.body.message;
@@ -72,5 +74,7 @@ app.post("/message", function(req, res) {
 });
 
 // Open server on specified port
-console.log("Starting Express server");
-app.listen(process.env.PORT || 5001);
+var port = process.env.PORT || 5001;
+app.listen(port, function(){
+  console.log("Application listening on Port:", port);
+});
