@@ -34,6 +34,13 @@ The `src/js/datachannel-demo.js` file __is not__ set up to send AJAX requests to
 
 You'll also need to change the config values in `src/_servers/php/config.example.php` and rename it to `config.php`, as well as changing the `PUSHER_APP_KEY` value in `src/js/datachannel-demo.js`.
 
+You can then install your dependencies using [composer](https://getcomposer.org/)
+
+```
+$ cd /path/to/your/app/src/_servers/php
+$ composer install
+```
+
 Navigate to http://yourdomain.dev/index.html to see the side-by-side example or http://yourdomain.dev/chat.html to see the standalone example. Obviously you'll need to change the domain to wherever you're hosting the PHP files.
 
 ### /src/_servers/ruby-sinatra

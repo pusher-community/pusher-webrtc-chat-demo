@@ -1,0 +1,14 @@
+{
+    "name": "pusher/webrtc-datachannel-demo",
+    "type": "project",
+    "require": {
+        "pusher/pusher-php-server": "^2.6"
+    },
+    "license": "MiT",
+    "authors": [
+        {
+            "name": "Robin Hawkes",
+            "email": "robin@pusher.com"
+        }
+    ]
+}

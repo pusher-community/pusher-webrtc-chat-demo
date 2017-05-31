@@ -1,6 +1,7 @@
 <?php
-require_once("Pusher.php");
 require_once("config.php");
+require __DIR__ . '/vendor/autoload.php';
+
 
 // TODO: Check for valid POST data
 
