@@ -29,6 +29,13 @@ var pusher = new Pusher({
   cluster: config.cluster
 });
 
+var pusherCallback = function(err, req, res){
+  if(err){
+    console.log("Pusher error:", err.message);
+    console.log(err.stack);
+  }
+}
+
 // --------------------------------------------------------------------
 // SET UP EXPRESS
 // --------------------------------------------------------------------
@@ -68,7 +75,7 @@ app.post("/message", function(req, res) {
   var channel = req.body.channel;
   var message = req.body.message;
 
-  pusher.trigger(channel, "message", message, socketId);
+  pusher.trigger(channel, "message", message, socketId, pusherCallback);
 
   res.send(200);
 });
