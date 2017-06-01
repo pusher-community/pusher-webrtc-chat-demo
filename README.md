@@ -14,7 +14,7 @@ The server code required to run the demo using [Node.js](http://nodejs.org/).
 
 The `src/js/datachannel-demo.js` file by default is set up to send AJAX requests to the Node.js server.
 
-You'll need to change the config values in `src/_servers/nodejs/config.example.js` and rename it to `config.js`, as well as changing the `PUSHER_APP_KEY` value in `src/js/datachannel-demo.js`.
+You'll need to change the config values in `src/_servers/nodejs/config.example.js` and rename it to `config.js`, as well as changing the `PUSHER_APP_KEY` and `PUSHER_APP_CLUSTER` values in `src/js/datachannel-demo.js`.
 
 You can then get up and running by running the following commands in the terminal:
 
@@ -32,7 +32,14 @@ The server code required to run the demo using [PHP](http://php.net/).
 
 The `src/js/datachannel-demo.js` file __is not__ set up to send AJAX requests to the PHP server by default. To enable this you'll need to change the AJAX URL in `datachannel.openSignalingChannel` to point to `_servers/php/message.php`.
 
-You'll also need to change the config values in `src/_servers/php/config.example.php` and rename it to `config.php`, as well as changing the `PUSHER_APP_KEY` value in `src/js/datachannel-demo.js`.
+You'll also need to change the config values in `src/_servers/php/config.example.php` and rename it to `config.php`, as well as changing the `PUSHER_APP_KEY` and `PUSHER_APP_CLUSTER` values in `src/js/datachannel-demo.js`.
+
+You can then install your dependencies using [composer](https://getcomposer.org/)
+
+```
+$ cd /path/to/your/app/src/_servers/php
+$ composer install
+```
 
 Navigate to http://yourdomain.dev/index.html to see the side-by-side example or http://yourdomain.dev/chat.html to see the standalone example. Obviously you'll need to change the domain to wherever you're hosting the PHP files.
 
@@ -42,7 +49,7 @@ The server code required to run the demo using [Ruby Sinatra](http://www.sinatra
 
 The `src/js/datachannel-demo.js` file by default is set up to send AJAX requests to the Ruby Sinatra server.
 
-You'll need to change the config values in `src/_servers/ruby-sinatra/config.example.rb` and rename it to `config.rb`, as well as changing the `PUSHER_APP_KEY` value in `src/js/datachannel-demo.js`.
+You'll need to change the config values in `src/_servers/ruby-sinatra/config.example.rb` and rename it to `config.rb`, as well as changing the `PUSHER_APP_KEY` and `PUSHER_APP_CLUSTER` value in `src/js/datachannel-demo.js`.
 
 You can then get up and running by running the following commands in the terminal:
 
